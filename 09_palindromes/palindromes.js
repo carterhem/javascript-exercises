@@ -4,6 +4,7 @@ const palindromes = function (input) {
 input = input.replace(/[.,\/#!$%\^&\*;:@{}=\-_`~()]/g, "")
   // start string with / match any number of whitespace characters \s+ globally \g and replace it with second parameter "" as in nothing
   .replace(/\s+/g, "");
+//note that this is only for palindrome testing where spaces don't matter, the above will collapse any whitespaces to nothing which is really only relevant in this scenario (it wouldn't work if we wanted to keep the punctation as is for example)
 
 let cleanString = input.toLowerCase();
 // create string/ lowercase it, remove all spaces and punctiation
